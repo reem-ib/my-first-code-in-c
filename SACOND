@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    char student[3][10];
+    int dgree[3][3];
+
+    float avrege[3];
+    for(int i=0; i<3; i++){
+        printf("Enter student name :");
+        scanf(" %s",student[i]);
+        printf(" %s \n",student[i]);
+            int sum=0;
+        for(int j=0; j<3; j++){
+            printf("Enter 3 course degree :");
+            scanf(" %d",&dgree[i][j]);
+            sum+=dgree[i][j];
+        }  
+        
+        avrege[i]=sum/3.0f;
+}
+
+    printf("\n student and thier greede \n");
+    for(int i=0; i<3; i++){
+        printf(" %s the avrege is %.2f: \n",student[i],avrege);
+        for(int j=0; j<3; j++){
+          printf(" %d \n",dgree[i][j]);
+        }
+   
+
+    }
+    return 0;
